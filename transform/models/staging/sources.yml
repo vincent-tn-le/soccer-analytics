@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: export
+    description: Flattened CSV exports from raw landing
+    meta:
+      export_dir: "{{ env_var('MATCHPULSE_EXPORT_DIR', '../data/warehouse/export') }}"
+    tables:
+      - name: matches
+        meta:
+          external_location: "{{ env_var('MATCHPULSE_EXPORT_DIR', '../data/warehouse/export') }}/matches.csv"
+      - name: standings
+        meta:
+          external_location: "{{ env_var('MATCHPULSE_EXPORT_DIR', '../data/warehouse/export') }}/standings.csv"
+      - name: extracts
+        meta:
+          external_location: "{{ env_var('MATCHPULSE_EXPORT_DIR', '../data/warehouse/export') }}/extracts.csv"

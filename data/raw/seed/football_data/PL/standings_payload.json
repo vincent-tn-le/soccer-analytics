@@ -1,0 +1,38 @@
+{
+  "filters": {"season": "2025"},
+  "area": {"id": 2072, "name": "England"},
+  "competition": {"id": 2021, "name": "Premier League", "code": "PL", "type": "LEAGUE"},
+  "season": {"id": 2300, "startDate": "2025-08-15", "endDate": "2026-05-24", "currentMatchday": 1},
+  "standings": [
+    {
+      "stage": "REGULAR_SEASON",
+      "type": "TOTAL",
+      "table": [
+        {
+          "position": 1,
+          "team": {"id": 57, "name": "Arsenal FC", "tla": "ARS"},
+          "playedGames": 1,
+          "won": 1,
+          "draw": 0,
+          "lost": 0,
+          "points": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 1,
+          "goalDifference": 1
+        },
+        {
+          "position": 2,
+          "team": {"id": 64, "name": "Liverpool FC", "tla": "LIV"},
+          "playedGames": 1,
+          "won": 0,
+          "draw": 1,
+          "lost": 0,
+          "points": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0
+        }
+      ]
+    }
+  ]
+}

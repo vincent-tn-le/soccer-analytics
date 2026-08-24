@@ -1,0 +1,33 @@
+{
+  "filters": {"season": "2025"},
+  "resultSet": {"count": 2, "competitions": "PL", "first": "2025-08-15", "last": "2025-08-16"},
+  "competition": {"id": 2021, "name": "Premier League", "code": "PL", "type": "LEAGUE"},
+  "matches": [
+    {
+      "id": 500001,
+      "utcDate": "2025-08-15T19:00:00Z",
+      "status": "FINISHED",
+      "matchday": 1,
+      "homeTeam": {"id": 57, "name": "Arsenal FC", "tla": "ARS"},
+      "awayTeam": {"id": 65, "name": "Manchester City FC", "tla": "MCI"},
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {"home": 2, "away": 1},
+        "halfTime": {"home": 1, "away": 0}
+      }
+    },
+    {
+      "id": 500002,
+      "utcDate": "2025-08-16T14:00:00Z",
+      "status": "FINISHED",
+      "matchday": 1,
+      "homeTeam": {"id": 64, "name": "Liverpool FC", "tla": "LIV"},
+      "awayTeam": {"id": 66, "name": "Manchester United FC", "tla": "MUN"},
+      "score": {
+        "winner": "DRAW",
+        "fullTime": {"home": 1, "away": 1},
+        "halfTime": {"home": 0, "away": 0}
+      }
+    }
+  ]
+}

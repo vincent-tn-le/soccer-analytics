@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: matchpulse
+      POSTGRES_PASSWORD: matchpulse
+      POSTGRES_DB: matchpulse
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U matchpulse"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  metabase:
+    image: metabase/metabase:v0.50.25
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+    volumes:
+      - metabase_data:/metabase-data
+      - ./data/warehouse:/data/warehouse:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+  metabase_data:

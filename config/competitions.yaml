@@ -1,0 +1,44 @@
+# Big Five — football-data.org free tier competition codes
+# Docs: https://www.football-data.org/documentation/quickstart
+season: "2025"  # football-data uses starting year for season (2025 = 2025/26)
+
+competitions:
+  - code: PL
+    name: Premier League
+    country: England
+    provider: football-data.org
+    provider_id: 2021
+    timezone: Europe/London
+    subreddits: [soccer, PremierLeague]  # used in later Reddit slice
+
+  - code: PD
+    name: La Liga
+    country: Spain
+    provider: football-data.org
+    provider_id: 2014
+    timezone: Europe/Madrid
+    subreddits: [soccer, Laliga]
+
+  - code: SA
+    name: Serie A
+    country: Italy
+    provider: football-data.org
+    provider_id: 2019
+    timezone: Europe/Rome
+    subreddits: [soccer, seriea]
+
+  - code: BL1
+    name: Bundesliga
+    country: Germany
+    provider: football-data.org
+    provider_id: 2002
+    timezone: Europe/Berlin
+    subreddits: [soccer, Bundesliga]
+
+  - code: FL1
+    name: Ligue 1
+    country: France
+    provider: football-data.org
+    provider_id: 2015
+    timezone: Europe/Paris
+    subreddits: [soccer, Ligue1]

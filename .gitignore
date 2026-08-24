@@ -1,0 +1,35 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Local data (keep seed)
+data/raw/football_data/
+data/warehouse/*
+!data/warehouse/.gitkeep
+!data/raw/seed/
+
+# dbt
+transform/target/
+transform/dbt_packages/
+transform/logs/
+transform/.user.yml
+
+# Dagster
+orchestration/tmp*/
+orchestration/storage/
+orchestration/history/
+orchestration/compute_logs/
+orchestration/.dagster/
+home/.dagster/
+
+# IDE
+.idea/
+.vscode/
+*.swp

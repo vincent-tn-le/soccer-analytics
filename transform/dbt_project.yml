@@ -1,0 +1,22 @@
+name: matchpulse
+version: 1.0.0
+config-version: 2
+profile: matchpulse
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  matchpulse:
+    staging:
+      +schema: staging
+      +materialized: view
+    marts:
+      +schema: marts
+      +materialized: table
+    ops:
+      +schema: ops
+      +materialized: table

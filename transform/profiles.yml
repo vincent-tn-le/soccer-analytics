@@ -1,0 +1,8 @@
+matchpulse:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('MATCHPULSE_WAREHOUSE_PATH', '../data/warehouse/matchpulse.duckdb') }}"
+      threads: 4
+      schema: main

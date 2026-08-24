@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stg_matches
+    columns:
+      - name: match_id
+        tests: [not_null]
+      - name: competition_code
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['PL', 'PD', 'SA', 'BL1', 'FL1']
+
+  - name: fct_matches
+    description: One row per match
+    columns:
+      - name: match_id
+        tests: [not_null, unique]
+      - name: competition_code
+        tests: [not_null]
+      - name: home_team_id
+        tests: [not_null]
+      - name: away_team_id
+        tests: [not_null]
+
+  - name: fct_standings_snapshot
+    columns:
+      - name: competition_code
+        tests: [not_null]
+      - name: team_id
+        tests: [not_null]
+      - name: position
+        tests: [not_null]
+
+  - name: dim_competition
+    columns:
+      - name: competition_id
+        tests: [not_null, unique]
+
+  - name: dim_team
+    columns:
+      - name: team_id
+        tests: [not_null]
+      - name: competition_code
+        tests: [not_null]
+
+  - name: ops_freshness
+    columns:
+      - name: competition_code
+        tests: [not_null]
+      - name: entity
+        tests: [not_null]
+      - name: last_extracted_at
+        tests: [not_null]
+
+  - name: mart_league_table_current
+    columns:
+      - name: team_id
+        tests: [not_null]

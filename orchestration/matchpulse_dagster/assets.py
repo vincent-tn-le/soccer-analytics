@@ -1,7 +1,5 @@
 """Dagster assets: parameterized raw ingest + flatten + dbt build."""
 
-from __future__ import annotations
-
 import os
 import subprocess
 
